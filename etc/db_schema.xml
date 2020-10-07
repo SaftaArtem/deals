@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="deals_commission" resource="default" engine="innodb" comment="Deals Commission">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="int" name="order_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Order ID"/>
+        <column xsi:type="int" name="item_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Item ID"/>
+        <column xsi:type="decimal" name="item_price_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Price Incl Tax"/>
+        <column xsi:type="decimal" name="item_price_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Price Excl Tax"/>
+        <column xsi:type="decimal" name="item_commission_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Commission Incl Tax"/>
+        <column xsi:type="decimal" name="item_commission_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Commission Excl Tax"/>
+        <column xsi:type="decimal" name="item_commission_percentage" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Commission Percentage"/>
+        <column xsi:type="decimal" name="item_revenue_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Revenue Incl Tax"/>
+        <column xsi:type="decimal" name="item_revenue_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Revenue Excl Tax"/>
+        <column xsi:type="decimal" name="item_shipping_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Shipping Incl Tax"/>
+        <column xsi:type="decimal" name="item_shipping_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Item Shipping Excl Tax"/>
+        <column xsi:type="varchar" name="trackntrace" nullable="true" length="255" comment="Trackntrace"/>
+        <column xsi:type="int" name="product_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Product ID"/>
+        <column xsi:type="int" name="manufacturer_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Manufacturer Id"/>
+        <column xsi:type="int" name="settlement_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Settlement Id"/>
+        <column xsi:type="timestamp" name="created_date" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Date"/>
+        <column xsi:type="timestamp" name="updated_date" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Update Date"/>
+        <column xsi:type="int" name="state" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="State"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="deals_settlements" resource="default" engine="innodb" comment="Deals Settlements">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="decimal" name="total_price_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Price Incl Tax"/>
+        <column xsi:type="decimal" name="total_price_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Price Excl Tax"/>
+        <column xsi:type="decimal" name="total_commission_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Commission Incl Tax"/>
+        <column xsi:type="decimal" name="total_commission_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Commission Excl Tax"/>
+        <column xsi:type="decimal" name="total_revenue_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Revenue Incl Tax"/>
+        <column xsi:type="decimal" name="total_revenue_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Revenue Excl Tax"/>
+        <column xsi:type="decimal" name="total_shipping_incl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Shipping Incl Tax"/>
+        <column xsi:type="decimal" name="total_shipping_excl_tax" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Total Shipping Excl Tax"/>
+        <column xsi:type="decimal" name="average_commission_percentage" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Average Commission Percentage"/>
+        <column xsi:type="int" name="manufacturer_id" padding="10" unsigned="true" nullable="false" identity="false" default="0" comment="Manufacturer Id"/>
+        <column xsi:type="timestamp" name="created_date" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Date"/>
+        <column xsi:type="timestamp" name="updated_date" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Update Date"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

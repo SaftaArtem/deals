@@ -1,0 +1,48 @@
+{
+    "deals_commission": {
+        "column": {
+            "id": true,
+            "order_id": true,
+            "item_id": true,
+            "item_price_incl_tax": true,
+            "item_price_excl_tax": true,
+            "item_commission_incl_tax": true,
+            "item_commission_excl_tax": true,
+            "item_commission_percentage": true,
+            "item_revenue_incl_tax": true,
+            "item_revenue_excl_tax": true,
+            "item_shipping_incl_tax": true,
+            "item_shipping_excl_tax": true,
+            "trackntrace": true,
+            "product_id": true,
+            "manufacturer_id": true,
+            "settlement_id": true,
+            "created_date": true,
+            "updated_date": true,
+            "state": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "deals_settlements": {
+        "column": {
+            "id": true,
+            "total_price_incl_tax": true,
+            "total_price_excl_tax": true,
+            "total_commission_incl_tax": true,
+            "total_commission_excl_tax": true,
+            "total_revenue_incl_tax": true,
+            "total_revenue_excl_tax": true,
+            "total_shipping_incl_tax": true,
+            "total_shipping_excl_tax": true,
+            "average_commission_percentage": true,
+            "manufacturer_id": true,
+            "created_date": true,
+            "updated_date": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
