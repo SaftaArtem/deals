@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Dealsales_Deals::deals"
+             title="Dealsales"
+             translate="title"
+             module="Dealsales_Deals"
+             sortOrder="39"
+             resource="Dealsales_Deals::support"/>
+
+        <add id="Dealsales_Deals::opensettlements"
+             title="Åbne afregninger"
+             module="Dealsales_Deals"
+             sortOrder="40"
+             action="deals/opensettlements/index"
+             parent="Dealsales_Deals::deals"
+             resource="Dealsales_Deals::opensettlements"/>
+
+        <add id="Dealsales_Deals::closedsettlements"
+             title="Udbetalte afregninger"
+             module="Dealsales_Deals"
+             sortOrder="41"
+             action="deals/adminhtml_closedsettlements"
+             parent="Dealsales_Deals::deals"
+             resource="Dealsales_Deals::closedsettlements"/>
+
+        <add id="Dealsales_Deals::dssettlements"
+             title="DealSales afregninger"
+             module="Dealsales_Deals"
+             sortOrder="42"
+             action="deals/adminhtml_dssettlements"
+             parent="Dealsales_Deals::deals"
+             resource="Dealsales_Deals::dssettlements"/>
+
+        <add id="Dealsales_Deals::stats"
+             title="Stats"
+             module="Dealsales_Deals"
+             sortOrder="43"
+             action="deals/adminhtml_deals"
+             parent="Dealsales_Deals::deals"
+             resource="Dealsales_Deals::stats"/>
+
+        <add id="Dealsales_Deals::lostquotes"
+             title="Tabt kurv"
+             module="Dealsales_Deals"
+             sortOrder="44"
+             action="deals/adminhtml_lostquotes"
+             parent="Dealsales_Deals::deals"
+             resource="Dealsales_Deals::lostquotes"/>
+
+    </menu>
+</config>
