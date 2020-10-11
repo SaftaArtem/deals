@@ -2,8 +2,8 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing_data_source</item>
-            <item name="deps" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing_data_source</item>
+            <item name="provider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing_data_source</item>
+            <item name="deps" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing_data_source</item>
         </item>
         <item name="spinner" xsi:type="string">opensettlements_records_columns</item>
         <item name="buttons" xsi:type="array">
@@ -15,10 +15,10 @@
             </item>
         </item>
     </argument>
-    <dataSource name="dealsales_opensettlements_listing_data_source">
+    <dataSource name="deal_sales_opensettlements_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
-            <argument name="name" xsi:type="string">dealsales_opensettlements_listing_data_source</argument>
+            <argument name="name" xsi:type="string">deal_sales_opensettlements_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
@@ -52,7 +52,7 @@
                     <item name="storageConfig" xsi:type="array">
                         <item name="saveUrl" xsi:type="url" path="mui/bookmark/save"/>
                         <item name="deleteUrl" xsi:type="url" path="mui/bookmark/delete"/>
-                        <item name="namespace" xsi:type="string">dealsales_opensettlements_listing</item>
+                        <item name="namespace" xsi:type="string">deal_sales_opensettlements_listing</item>
                     </item>
                 </item>
             </argument>
@@ -61,7 +61,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
-                        <item name="provider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.opensettlements_records_columns</item>
+                        <item name="provider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.opensettlements_records_columns</item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
                     <item name="displayArea" xsi:type="string">dataGridActions</item>
@@ -72,13 +72,13 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.listing_top.bookmarks</item>
                         <item name="namespace" xsi:type="string">current.filters</item>
                     </item>
                     <item name="childDefaults" xsi:type="array">
-                        <item name="provider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.listing_top.listing_filters</item>
+                        <item name="provider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.listing_top.listing_filters</item>
                         <item name="imports" xsi:type="array">
-                            <item name="visible" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.listing_top.bookmarks:current.columns.${ $.index }.visible</item>
+                            <item name="visible" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.listing_top.bookmarks:current.columns.${ $.index }.visible</item>
                         </item>
                     </item>
                 </item>
@@ -89,7 +89,7 @@
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.opensettlements_records_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.opensettlements_records_columns.ids</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
                     <item name="indexField" xsi:type="string">id</item>
                 </item>
@@ -112,17 +112,14 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing_top.bookmarks</item>
                         <item name="namespace" xsi:type="string">current.paging</item>
                     </item>
-                    <item name="selectProvider" xsi:type="string">dealsales_opensettlements_listing.dealsales_opensettlements_listing.opensettlements_records_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">deal_sales_opensettlements_listing.deal_sales_opensettlements_listing.opensettlements_records_columns.ids</item>
                     <item name="displayArea" xsi:type="string">bottom</item>
                 </item>
             </argument>
         </paging>
-
-
-
     </container>
     <columns name="opensettlements_records_columns">
         <selectionsColumn name="ids">
@@ -138,6 +135,70 @@
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Total Price Incl Tax</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_price_excl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Total Price Excl Tax</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_commission_incl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Leverandør kommission total inkl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_commission_excl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Leverandør kommission total eksl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_revenue_incl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Fortjeneste total inkl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_revenue_excl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Fortjeneste total eksl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_shipping_incl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Fragt total inkl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="total_shipping_excl_tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Fragt total eksl. Moms</item>
+                </item>
+            </argument>
+        </column>
+        <column name="created_date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Opdateret</item>
                 </item>
             </argument>
         </column>

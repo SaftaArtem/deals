@@ -29,7 +29,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="dealsales_opensettlements_listing_data_source" xsi:type="string">Dealsales\Deals\Model\ResourceModel\Opensettlements</item>
+                <item name="deal_sales_opensettlements_listing_data_source" xsi:type="string">Dealsales\Deals\Model\ResourceModel\Opensettlements</item>
             </argument>
         </arguments>
     </type>
