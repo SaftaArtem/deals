@@ -130,6 +130,14 @@
                 </item>
             </argument>
         </selectionsColumn>
+        <column name="brand">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Leverandør</item>
+                </item>
+            </argument>
+        </column>
         <column name="total_price_incl_tax">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

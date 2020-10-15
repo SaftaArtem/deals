@@ -92,7 +92,7 @@ class Opensettlements extends \Dealsales\Deals\Model\ResourceModel\Settlements\C
     {
         $storeId = $this->storeManager->getStore()->getId();
         $brand_table = $this->getTable('brand');
-        $collection = $this->getSelect()
+        $this->getSelect()
             ->columns('SUM(total_price_incl_tax) as total_price_incl_tax')
             ->columns('SUM(total_price_excl_tax) as total_price_excl_tax')
             ->columns('SUM(total_commission_incl_tax) as total_commission_incl_tax')
@@ -107,12 +107,6 @@ class Opensettlements extends \Dealsales\Deals\Model\ResourceModel\Settlements\C
             ->where("state = 0")
             ->where('main_table.store_id = ' . $storeId)
             ->group('manufacturer_id');
-
-        ci($this);
-        die('--');
-        $this->setCollection($collection);
-        die(var_dump($collection->getSelect()->__toString()));
-
         parent::_renderFiltersBefore();
     }
 }
