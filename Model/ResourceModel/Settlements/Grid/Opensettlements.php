@@ -35,7 +35,7 @@ class Opensettlements extends \Dealsales\Deals\Model\ResourceModel\Settlements\C
         $eventObject,
         $resourceModel,
         $model = \Magento\Framework\View\Element\UiComponent\DataProvider\Document::class,
-        $connection = null,
+        \Magento\Framework\DB\Adapter\AdapterInterface$connection = null,
         \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
     ) {
         $this->storeManager = $storeManager;
@@ -90,7 +90,6 @@ class Opensettlements extends \Dealsales\Deals\Model\ResourceModel\Settlements\C
 
     protected function _renderFiltersBefore()
     {
-        $storeId = $this->storeManager->getStore()->getId();
         $brand_table = $this->getTable('brand');
         $this->getSelect()
             ->columns('SUM(total_price_incl_tax) as total_price_incl_tax')
@@ -105,7 +104,6 @@ class Opensettlements extends \Dealsales\Deals\Model\ResourceModel\Settlements\C
                 ['brand' => 'brand']
             )->where("type = 0")
             ->where("state = 0")
-            ->where('main_table.store_id = ' . $storeId)
             ->group('manufacturer_id');
         parent::_renderFiltersBefore();
     }
