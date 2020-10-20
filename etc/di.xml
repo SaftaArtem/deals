@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--    Opensettlements-->
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
@@ -15,4 +16,23 @@
             <argument name="resourceModel" xsi:type="string">Dealsales\Deals\Model\ResourceModel\Settlements</argument>
         </arguments>
     </type>
+    <!--    Opensettlements-->
+
+    <!--    Dssettlements-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="deal_sales_dssettlements_listing_data_source" xsi:type="string">Dealsales\Deals\Model\ResourceModel\Settlements\Grid\Dssettlements</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Dealsales\Deals\Model\ResourceModel\Settlements\Grid\Dssettlements">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">deals_settlements</argument>
+            <argument name="eventPrefix" xsi:type="string">dssettlements</argument>
+            <argument name="eventObject" xsi:type="string">dssettlements</argument>
+            <argument name="resourceModel" xsi:type="string">Dealsales\Deals\Model\ResourceModel\Settlements</argument>
+        </arguments>
+    </type>
+    <!--    Dssettlements-->
 </config>

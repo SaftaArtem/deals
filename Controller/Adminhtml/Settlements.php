@@ -8,7 +8,7 @@ use Magento\Backend\App\AbstractAction;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-abstract class Opensettlements extends AbstractAction
+abstract class Settlements extends AbstractAction
 {
     protected $resultPageFactory;
     protected $processCron;

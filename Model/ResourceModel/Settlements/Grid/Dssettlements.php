@@ -13,7 +13,7 @@ use Magento\Framework\View\Element\UiComponent\DataProvider\Document;
 use Magento\Store\Model\StoreManagerInterface;
 use Psr\Log\LoggerInterface;
 
-class Opensettlements extends Collection implements SearchResultInterface
+class Dssettlements extends Collection implements SearchResultInterface
 {
     protected $aggregations;
     private $storeManager;

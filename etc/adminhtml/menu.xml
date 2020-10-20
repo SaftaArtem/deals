@@ -29,7 +29,7 @@
              title="DealSales afregninger"
              module="Dealsales_Deals"
              sortOrder="42"
-             action="deals/adminhtml_dssettlements"
+             action="deals/dssettlements/index"
              parent="Dealsales_Deals::deals"
              resource="Dealsales_Deals::dssettlements"/>
 
